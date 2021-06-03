@@ -36,3 +36,33 @@ Challenge from Brad Traversy & Florin Pop on Udemy '50 Projects in 50 Days'
 ---
 
 ## Takeaways from the instructor
+
+1. HTML
+
+- header tag
+- ul tag for the user list
+  - li > user data
+  - li > h3: Loading...
+
+2. CSS
+
+- for the user image: object-fit: cover
+- for the border: .user-list li:not(:list-of-type) {border-bottom: 1px solid #eee;}
+- set hide class in CSS: user-list li.hide {display: none;}
+
+3. JavaScript
+
+- fetch data push to an empty array(var listItem) to use for filtering function
+- event listener input
+
+```
+function filterData(searchTerm) {
+  listItems.forEach(item => {
+    if ( item.innerText.toLowerCase().includes(searchTerm.toLowerCase()) ) {
+      item.classList.remove('hide')
+    } else {
+      item.classList.add('hide')
+    }
+  })
+}
+```
